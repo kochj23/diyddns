@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/kochj23/diyddns/compare/v1.0.0...v1.0.1) (2026-11-10)
+
+
+### Bug Fixes
+
+* **packaging:** add the server and client Dockerfiles CI builds from ([f5489e9](https://github.com/kochj23/diyddns/commit/f5489e936bf43258650af056cb0e280324a4cbf1))
+
 # 1.0.0 (2026-11-10)
 
 
