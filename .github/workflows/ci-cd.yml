@@ -48,13 +48,14 @@ jobs:
       issues: write
       pull-requests: write
     with:
-      use-github-app: true
+      # This fork has no GitHub App (APP_ID / APP_PRIVATE_KEY secrets unset),
+      # which made actions/create-github-app-token fail with "appId option is
+      # required". Release with GITHUB_TOKEN instead; the container jobs run
+      # in this same workflow, so no downstream-workflow trigger is needed.
+      use-github-app: false
       go: true
       goreleaser: true
       extra-plugins: '@semantic-release/changelog @semantic-release/git @semantic-release/exec'
-    secrets:
-      app-id: ${{ secrets.APP_ID }}
-      app-private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
   # Derive major and major.minor from the released semver so the container
   # images get the full set of moving tags (v2, v2.3, v2.3.1).
