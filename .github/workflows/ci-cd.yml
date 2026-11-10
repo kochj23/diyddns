@@ -90,6 +90,9 @@ jobs:
       image-name: ${{ github.repository }}-server
       context: .
       file: packaging/docker/server.Dockerfile
+      build-args: |
+        VERSION=${{ needs.release.outputs.new-release-version-v }}
+        COMMIT=${{ github.sha }}
       platforms: linux/amd64,linux/arm64
       push: true
       version: ${{ needs.release.outputs.new-release-version-v }}
@@ -112,6 +115,9 @@ jobs:
       image-name: ${{ github.repository }}-client
       context: .
       file: packaging/docker/client.Dockerfile
+      build-args: |
+        VERSION=${{ needs.release.outputs.new-release-version-v }}
+        COMMIT=${{ github.sha }}
       platforms: linux/amd64,linux/arm64
       push: true
       version: ${{ needs.release.outputs.new-release-version-v }}
