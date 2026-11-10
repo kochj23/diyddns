@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/kochj23/diyddns/compare/v1.0.1...v1.0.2) (2026-11-10)
+
+
+### Bug Fixes
+
+* **ci:** bump jacaudi/github-actions to v0.20.3 for multi-image builds ([ddd6d53](https://github.com/kochj23/diyddns/commit/ddd6d534e4c334e860960330c1e518a2db0d5685))
+
 ## [1.0.1](https://github.com/kochj23/diyddns/compare/v1.0.0...v1.0.1) (2026-11-10)
 
 
